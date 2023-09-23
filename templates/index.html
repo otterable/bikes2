@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Radlzentrum.at - Ermine.at</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+body {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+
+
+        .logo-container {
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .logo {
+            max-width: 8%; /* Reduced by 50% */
+            height: auto;
+        }
+
+.button-container {
+    display: flex;
+	    flex: 1; /* Take up all available space left after allocating space for the image showcase */
+
+    flex-direction: column;
+    /* Remove align-items: center; to allow buttons to take full width */
+    padding: 20px 0;
+    max-width: 20%; /* This ensures the container takes up the full width of its parent */
+}
+
+.button {
+    font-weight: bold;
+    border: 5px solid white;
+    padding: 20px 0;
+    margin: 3px 0;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+
+
+/* For mobile screens (less than 1300px) */
+@media screen and (max-width: 1300px) {
+    .button {
+        padding: 5px 10px;
+        font-size: 16px;
+		    margin: 2px 2px;
+			            justify-content: center;
+
+
+		
+    
+	
+	.button-container {
+    display: flex;
+	    max-width: 100%; /* This ensures the container takes up the full width of its parent */
+		    width: 100%;
+
+		            flex-wrap: wrap;
+	    flex: 1; /* Take up all available space left after allocating space for the image showcase */
+
+            justify-content: center;
+
+}
+
+}
+}
+        /* Button colors */
+        .button-color-1 { background-color: #003049; color: white; }
+        .button-color-2 { background-color: #D62828; color: white; }
+        .button-color-3 { background-color: #F77F00; color: black; }
+        .button-color-4 { background-color: #FCBF49; color: black; }
+        .button-color-5 { background-color: #EAE2B7; color: black; }
+        .button-color-6 { background-color: #9CB380; color: black; }
+        .button-color-7 { background-color: #1B98E0; color: black; }
+        .button-color-8 { background-color: #2E933C; color: black; }
+		
+		
+		
+		.button-color-1:hover { background-color: #002239; }
+		.button-color-2:hover { background-color: #B61818; }
+		.button-color-3:hover { background-color: #D66A00; }
+		.button-color-4:hover { background-color: #F5AF19; }
+		.button-color-5:hover { background-color: #D9CF9F; }
+		.button-color-6:hover { background-color: #87A266; }
+		.button-color-7:hover { background-color: #1578B6; }
+		.button-color-8:hover { background-color: #1C742A; }
+
+
+
+        .audio-container {
+            width: calc(16.66% - 20px); /* Six columns on larger screens */
+            margin: 10px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+
+        audio {
+            width: 100%;
+        }
+
+        .audio-info {
+            font-size: 25px;
+            margin-top: 10px;
+        }
+
+        /* Video background */
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Adjust layout on mobile */
+        @media (max-width: 1301px) {
+		
+			.logo {
+                max-width: 40%; /* Increased size for mobile */
+            }
+		
+            .audio-container {
+                width: calc(50% - 20px); /* Two columns on smaller screens */
+            }
+        }
+		
+		
+		
+		
+		
+
+	
+	
+	
+	
+	
+	
+	
+	
+#calculator {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.calculator-field {
+  width: 80%;
+  padding: 15px;
+  padding-bottom: 19.5px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: white;
+}
+
+.calculator-field:first-child {
+  margin-top: 0;
+}
+
+/* Style the dropdown menu */
+#material {
+  width: 85%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: white;
+}
+
+
+
+}
+	   
+}
+}
+	
+	
+
+.calculator-input {
+    width: 10%;
+    padding: 50px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+	    box-sizing: border-box; /* This ensures that padding and border are included in the width */
+
+}
+
+
+.stripe-buy-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect for the Stripe buy buttons */
+.stripe-buy-button:hover {
+    background-color: #0056b3;
+}
+
+/* Hide Stripe buy buttons initially */
+.stripe-buy-button {
+    display: none;
+}
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.faq-button, .impressum-button {
+    background-color: #FF9999;  /* A lightened shade for demonstration */
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.5s ease;  /* Provides the fade effect */
+    border: none;
+    cursor: pointer;
+    margin-top:40px;
+		margin-right: 20px;	/* Adds a gap at the bottom of the buttons */
+    margin-bottom: 10px;
+
+}
+
+#google_translate_element {
+    margin-bottom: -10px;  /* Adjust this value as necessary */
+	    margin-top: 10px;  /* Adjust this value as necessary */
+
+}
+
+.google-translate-container {
+    background-color: #ffffff;  /* A lightened shade for demonstration */
+    color: white;
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.5s ease;  /* Provides the fade effect */
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+	    position: relative;
+    margin-top: -40px;
+
+
+      display: inline-flex; /* Changing to inline-flex for more consistent behavior with other flex children */
+    align-items: center; /* This will center the content vertically inside the Google Translate container */
+
+}
+
+
+
+.faq-button:hover, .impressum-button:hover {
+    background-color: #FF6666;  /* A slightly darkened shade */
+}
+
+.faq-button:active, .impressum-button:active {
+    background-color: #FF3333;  /* Even more darkened shade for click effect */
+}
+
+		
+		
+		/* Common styles for calculator-container and showcase-container */
+
+.container {
+    margin: 2% auto; /* This will provide dynamic spacing based on screen size */
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+.calculator-input {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.showcase-image {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+	    border: 5px solid white;
+
+}
+
+
+		
+
+	
+.main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 96%;  /* Adjust this as needed */
+}
+
+
+    /* Desktop layout */
+    @media (min-width: 1301px) {
+	.poster-container {
+    flex: 1; /* Take available space */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    border-radius: 10px;
+    max-width: 40.7%; /* Max width to account for the gap */
+    margin-bottom: 10px;
+    margin-right: 8px; /* Inner padding */
+}
+}
+@media (max-width: 1300px) { /* Adjust 768px based on your needs */
+    .poster-container {
+        width: 96%; /* 90% width for mobile */
+         display: flex;
+		     margin-right: auto; /* Inner padding */
+		     margin-left: 5px; /* Inner padding */
+
+        justify-content: center;
+
+}
+}
+.werkstatt-container {
+    flex: 1; /* Take available space */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    border-radius: 10px;
+    max-width: 38%; /* Max width to account for the gap */
+	    margin-bottom: 10px;
+			    border: 5px solid white; /* Thicker white border */
+
+    margin-right: 0px; /* Inner padding */
+
+}
+
+.calculator-container {
+    flex: 1; /* Take available space */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    padding: 20px; /* Inner padding */
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+	    border: 5px solid white; /* Thicker white border */
+
+    max-width: 60%; /* Max width to account for the gap */
+	    margin-left: auto;
+	    margin-right: auto;
+	    margin-bottom: auto;
+
+}
+
+
+
+/* On smaller screens, they stack */
+@media (max-width: 1301px) {
+    .main-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2%;
+    }
+
+    .showcase-container {
+	        max-width: 100%;
+        width: 98%;
+
+    }
+	
+	    .calculator-container {
+	        max-width: 100%;
+        width: 100%;
+    }
+		 
+
+   .button-container {
+	        max-width: 100%;
+        width: 98%;
+
+    }
+	   .werkstatt-container {
+	        max-width: 100%;
+        width: 98%;
+
+    }
+}
+
+	}	
+		
+		
+        /* Showcase container styles */
+
+        .showcase-image {
+            width: auto;
+            height: 100%;
+            max-width: 100%;
+            opacity: 0;
+            object-fit: contain;
+            border-radius: 10px; /* Add round corners to the image */
+        }
+
+      
+		
+		/* ... (existing styles) ... */
+        
+        /* Grey box styles */
+        .grey-box {
+            background-color: grey;
+            color: white;
+            width: 42%; /* 50% - 4% - 4% */
+            float: left;
+            padding: 20px;
+            box-sizing: border-box;
+            margin: 0 4%; /* Add 4% gap on left and right sides */
+		}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+        /* Price Calculator Fields */
+        .calculator-fields {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: transparent;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .calculator-fields label {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .calculator-fields label,
+        .calculator-fields input,
+        .calculator-fields select {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .calculator-fields select {
+            appearance: none;
+            -webkit-appearance: none;
+            background: url('data:image/svg+xml;utf8,<svg fill="black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="24"><path d="M1.332 4l14.284 12.444L29.944 4z"/></svg>') no-repeat right center;
+            background-size: 24px;
+            background-color: white;
+            padding-right: 40px;
+        }
+
+		
+		
+		
+		
+
+
+		  .poster-image2 {
+            max-width: 20%; /* Adjust the width as needed */
+            height: auto;
+        }
+		
+		
+		
+		
+		     /* Additional style for the new field */
+         .info-field {
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        padding: 20px;
+        color: white;
+        text-align: center; /* Center the text */
+    }
+
+    .info-title {
+        font-weight: bold;
+        font-size: 25px;
+        margin: 10px;
+    }
+
+ .info-subtitle {
+        font-weight: bold;
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    .info-text {
+        font-size: 20px; /* Adjust the font size as needed */
+    }
+		
+		
+		
+		
+		
+		/* ... Other styles ... */
+
+/* Mobile adjustments placed at the end of your CSS */
+@media screen and (max-width: 1300px) {
+    body .info-title {
+        font-size: 22px !important;
+    }
+
+    body .info-subtitle {
+        font-size: 20px !important;
+    }
+
+    body .info-text {
+        font-size: 16px !important;
+
+
+    /* Adjusting for the calculator and other elements as needed */
+    body .calculator-field,
+    body #material,
+    body .calculator-input,
+    body .stripe-buy-button {
+        font-size: 14px !important;
+    }
+
+    body .audio-info {
+        font-size: 18px !important;
+    }
+
+    body .button {
+        font-size: 14px !important;
+    }
+}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/* Mobile layout */
+@media (max-width: 1301px) {
+    /* ... (other styles) ... */
+
+    /* Reduce the size of the logo by half */
+    .logo {
+        max-width: 30%; /* Adjust the width as needed */
+    }
+
+    /* ... (other styles) ... */
+}
+
+		
+
+
+  /* Mobile layout */
+    @media (max-width: 1301px) {
+        /* ... (other styles) ... */
+
+        /* Increase the size of posters to 150% on mobile */
+        .poster-image {
+            max-width: 90%; /* Adjust the width as needed */
+        }
+
+        /* ... (other styles) ... */
+    }
+	
+	
+	
+	
+	
+	
+	
+	}
+	
+
+    /* Desktop layout */
+    @media (min-width: 1301px) {
+        /* ... (other styles) ... */
+
+        /* Reduce the size of posters to 30% on desktop */
+        .poster-image {
+            max-width: 30%; /* Adjust the width as needed */
+        }
+
+        /* ... (other styles) ... */
+    }
+	
+	
+	
+	   /* Impressum Button Styling */
+    /* Center the Impressum Button */
+
+.lmao {
+    display: none;
+}
+
+
+    /* Impressum Field Styling */
+    .impressum-field {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px auto;
+        color: white;
+        max-width: 70%;
+        text-align: center;
+    }
+
+    /* Show Impressum Field when toggled */
+    .impressum-visible {
+        display: block;
+    }
+	
+	
+
+
+/* FAQ Field Styling */
+.faq-field {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    color: white;
+    max-width: 70%;
+    text-align: center;
+}
+
+
+	
+	
+	
+	
+	
+	
+	
+	/* Style the labels */
+label {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+
+
+#file-upload-label {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+/* Style the "Datei hochladen" label */
+#file-upload-label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style the dropdown menu */
+
+
+
+
+
+
+
+.uploadButton {
+  background-color: orange;
+  color: white;
+  font-size: 16px;
+  padding: 10px 0px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  display: block;
+  margin: 10px auto 0 auto; 
+
+}
+
+.uploadButton:hover {
+  background-color: darkorange;
+}
+
+#uploadStatus {
+    font-weight: bold;
+    margin-bottom: 20px; 
+}
+
+
+
+label[for="fileInput"] {
+  font-size: 18px; /* You can adjust the font size as needed */
+  font-weight: bold;
+}
+
+.uploadButton {
+  margin-top: 10px; /* Add space to the top */
+  margin-bottom: 20px; /*
+
+
+.button-container2 > * {
+    flex: 0 0 auto;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* This property vertically centers the direct children in the flex container */
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.button-container2 .faq-button {
+    margin-right: 10px; /* Adjust this value for spacing between the buttons */
+}
+
+.button-container2 .impressum-button {
+    margin-left: 10px; /* Adjust this value for spacing between the buttons */
+}
+
+.button-container2 .kontakt-button {
+    margin-left: 10px; /* Adjust this value for spacing between the buttons */
+}
+
+.expandable-section {
+    display: none; /* Hidden by default */
+    max-width: 72%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.expandable-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.highlighted {
+    color: #f77f00;
+}
+
+
+  .whatsapp-container {
+    position: fixed;
+    bottom: 13px;
+    right: 20px; /* Change from right to left */
+	            z-index: 2;
+
+}
+
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    background-color: #25d366;
+    border-radius: 80px; 
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-button img {
+    width: 50px;
+    height: 50px;
+    border-radius: 80%;
+}
+
+.whatsapp-text {
+    display: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.whatsapp-button:hover .whatsapp-text {
+    display: inline; /* Display the text when the button is hovered */
+}
+
+
+		
+		
+			.expandable-section {
+		display: none; /* Hidden by default */
+		max-width: 72%;
+		margin: 20px auto;
+		text-align: center;
+	}
+
+	.expandable-section2 {
+		display: none; /* Hidden by default */
+		max-width: 72%;
+		margin: 20px auto;
+		text-align: center;
+	}
+
+
+	.expandable-section3 {
+		display: none; /* Hidden by default */
+		max-width: 72%;
+		margin: 20px auto;
+		text-align: center;
+	}
+
+	.expandable-section4 {
+		display: none; /* Hidden by default */
+		max-width: 72%;
+		margin: 20px auto;
+		text-align: center;
+	}
+
+	.expandable-content {
+		background-color: rgba(0, 0, 0, 0.7);
+		padding: 20px;
+		border-radius: 10px;
+		color: white;
+	}
+		
+			
+				 /* Additional style for the new field */
+
+
+		.info-title {
+			font-weight: bold;
+			font-size: 28px;
+			margin: 10px;
+		}
+
+	 .info-subtitle {
+			font-weight: bold;
+			font-size: 24px;
+			margin: 10px;
+		}
+
+		.info-text {
+			font-size: 20px; /* Adjust the font size as needed */
+		}
+				 /* Apply color F77F00 to numbers */
+		.expandable-content .info-text .info-number {
+			color: #F77F00;
+		}
+		
+		    .weiter-button {
+        background-color: #4DAA57;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.5s ease;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .weiter-button:hover {
+        background-color: #941C2F;  /* A darker shade when hovered */
+    }
+	
+			    .weiter-button2 {
+        background-color: #1B9AAA;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.5s ease;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .weiter-button2:hover {
+        background-color: #85C7F2;  /* A darker shade when hovered */
+    }
+	
+			    .weiter-button3 {
+        background-color: #BA3F1D;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.5s ease;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .weiter-button3:hover {
+        background-color: #7B8CDE;  /* A darker shade when hovered */
+    }
+	
+		    .weiter-button4 {
+        background-color: #3F3047;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.5s ease;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .weiter-button4:hover {
+        background-color: #A52422;  /* A darker shade when hovered */
+    }
+</style>
+
+    </style>
+	
+	<div class="content-container">
+        <div class="logo-container">
+						<a href="https://ermine.at/">
+
+            <img class="logo" src="{{ url_for('static', filename='logo.png') }}" alt="Logo" id="logo">
+        </div>
+		        </div>
+
+		
+		       <!-- Add the poster image here -->
+
+		
+		
+	
+		
+
+
+
+
+		
+    </div>
+	
+    <!-- Centered "poster3.png" image -->
+
+
+
+
+
+
+
+    </div>
+</div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    document.querySelector('.button[href=".lmao"]').addEventListener('click', function(event) {
+        event.preventDefault();
+        let section = document.querySelector(event.target.getAttribute('href'));
+        if (section.style.display === "none" || !section.style.display) {
+            section.style.display = "block";
+        } else {
+            section.style.display = "none";
+        }
+    });
+
+    // Assuming you have an element with the class 'close-btn' to close the expandable section.
+    document.querySelector('.close-btn').addEventListener('click', function() {
+        document.querySelector('.lmao').style.display = 'none';
+    });
+
+});
+
+
+</script>
+    
+
+	
+
+	
+    <script>
+        // Randomly shuffle the button colors on page load
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var buttons = document.querySelectorAll('.button');
+    var buttonColors = ['button-color-1', 'button-color-2', 'button-color-3', 'button-color-4', 'button-color-5', 'button-color-6', 'button-color-7', 'button-color-8'];
+
+    shuffleArray(buttonColors); // Shuffle the array
+
+    buttons.forEach(function(button, index) {
+        button.classList.add(buttonColors[index]);
+    });
+});
+
+
+
+
+    </script>
+	
+	<script>
+	buttons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        // Remove the current color from the button
+        var currentColorClass = Array.from(button.classList).find(cls => buttonColors.includes(cls));
+        button.classList.remove(currentColorClass);
+        
+        // Choose a new color that's not the current one
+        var newColorClasses = buttonColors.filter(cls => cls !== currentColorClass);
+        var newColor = newColorClasses[Math.floor(Math.random() * newColorClasses.length)];
+        button.classList.add(newColor);
+    });
+});
+
+
+
+
+
+
+
+
+</script>
+
+</head>
+
+  <div class="whatsapp-container">
+        <div class="whatsapp-button" id="whatsapp-button">
+            <img src="{{ url_for('static', filename='whatsapp_icon.png') }}" alt="WhatsApp Icon">
+            <span class="whatsapp-text">Kontaktieren Sie uns über WhatsApp für spezielle Wünsche und Fragen! +43 670 359 66 14</span>
+        </div>
+    </div>
+		  <video id="video-background" autoplay muted loop>
+        <source src="{{ url_for('static', filename='video.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+<body>
+
+    
+ 
+</div>
+
+
+    <div id="content">
+
+	
+     
+        
+ 
+
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+
+
+
+
+
+
+<!-- calculator  -->
+
+
+
+
+
+
+        <!-- Price Calculator Fields -->
+
+		<div class="main-wrapper">
+		 <div class="button-container">
+		
+		
+
+            <!-- Assign unique class names to each button for color change -->
+						
+        <a href="/galerie" class="button">Top gebrauchte Fahrräder</a>
+		<a href="/ankauf" class="button">Fahrradankauf</a>
+		<a href="/reparatur" class="button">Rad Reparaturen</a>
+				<!-- Assign unique class names to each button for color change -->
+		   <a href="^~^" class="button">Cargobikes / Lastenräder</a>
+			<a href="wie" class="button">Wie kann ich bestellen?</a>
+
+<a href=".lmao" class="button">Weitere Projekte</a>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		       <div class="werkstatt-container">
+
+<div class="info-field">
+    <div class="info-title">Wir sind eine kleine Werkstatt im Zentrum von Wien.</div>
+    <div class="info-subtitle">Unsere Vorteile sind:</div>
+    <div style="margin-top: 20px;"> <!-- Adding a gap between titles -->
+        <div class="info-text">
+            <div class="info-subtitle" style="color: #d62828; font-weight: bold; display: block;">Komfort:</div>
+            <span style="color: #f77f00;"><strong>Unser Service ist schnell.</strong></span> Die Bestellung kann sofort über unseren <span style="color: #f77f00;"><strong>Preisrechner</strong></span> aufgegeben werden. <span style="color: #f77f00;"><strong>Kein</strong></span> E-Mail-Versand hin und zurück, <span style="color: #f77f00;"><strong>keine</strong></span> Wartezeit auf Öffnungszeiten. Das ist der größte Vorteil, den wir Ihnen bieten.<br>
+            <div class="info-subtitle" style="color: #d62828; font-weight: bold; display: block;">Preis:</div>
+            Unsere Preise sind <span style="color: #f77f00;"><strong>günstig</strong></span>.<br>
+            <div class="info-subtitle" style="color: #d62828; font-weight: bold; display: block;">Leidenschaft:</div>
+            Wir sind bei allem, was wir tun, mit <span style="color: #f77f00;"><strong>Leidenschaft</strong></span> dabei.
+        </div>
+    </div>
+</div>
+
+
+        </div>
+
+       	<div class="poster-container">
+				<img class="showcase-image" src="{{ url_for('static', filename='bikemountain.png') }}" alt="Poster 1">
+			</div>
+		
+
+</div>
+	
+	<div class="expandable-section">
+    <!-- Your content here -->
+    <div class="expandable-content">
+	<div class="info-title">  <span style="color: #ff0000;"> Ausverkauft,</span> Fahrräder sind derzeit erst im   <span style="color: #ff0000;"> Oktober </span> verfügbar.</span></div>
+
+        <div class="info-subtitle">Wir bauen unsere eigenen Lastenräder. Sie sind einfach, funktionieren aber gut.</div>
+
+
+  <div class="info-subtitle">Im Vergleich zu anderen Lastenrädern auf dem Markt:</div>
+
+
+  <div class="info-subtitle">- kosten unsere Fahrräder keine <span style="color: #F77F00;">6.000 €</span></div>
+
+  <div class="info-subtitle">- haben eine riesige Kiste, auf der man tatsächlich Dinge verstauen kann (<span style="color: #F77F00;">100 x 60 cm</span>!)</div>
+
+  <div class="info-subtitle">- haben einen <span style="color: #F77F00;">sehr leistungsstarken</span> Motor</div>
+
+
+  <div class="info-text"> Wir haben die Fahrräder <span style="color: #F77F00;">selbst gebaut</span> und können daher umfassenden Support und eventuelle Reparaturen anbieten.</div>
+
+		</div>
+
+ 		</div>
+
+	<div class="expandable-section2">
+		<!-- Brettspiele! Expandable Section -->
+	  
+		<div class="expandable-content">
+	   <div class="info-title">Wie kann ich bestellen?</div>
+
+	Unsere Website bietet eine unkomplizierte Möglichkeit, unsere Dienstleistungen zu bestellen. Wir finden, das ist ein cooles Konzept, das den gesamten Bestellvorgang vereinfacht. Wenn Ihnen das zu modern ist (wir sind in Österreich), können Sie uns per WhatsApp kontaktieren.
+
+	  	   <div class="info-title">Wie kann ich bestellen?</div>
+Klicken Sie auf die Schaltflächen in der Seitenleiste, um einen Dienst auszuwählen.
+			</div>
+			</div>
+	
+	<div class="lmao expandable-section">
+    <!-- Your content here -->
+    <div class="expandable-content">
+
+
+<div> 
+<a href="http://boardgames.ermine.at">
+    <button class="weiter-button">
+      Brettspiele!    </button>
+	  </div>
+<div>
+ Wir haben einige Brettspiele oder Erweiterungen erstellt.
+</a>
+</div> 
+<!-- Second Link/Button -->
+<a href="http://songlooping.ermine.at">
+   <div>
+   <button class="weiter-button2">
+	Songlooping
+	</button>
+</div>
+<div>
+
+    Eine Website, die Loop-Punkte in einem Song findet und eine Endlosschleife erstellt - man kann nicht sagen, wo der Song beginnt und endet.
+</a>
+</div>
+<!-- Third Link/Button -->
+
+</div>
+
+
+<!-- Calendly Inline-Widget Ende -->
+
+
+
+<!-- stripe buttons -->
+
+
+
+        <!-- Stripe Buy Buttons (Hidden by Default) -->
+        
+    </div>
+</div>
+
+
+
+
+
+<script>
+	document.querySelector('.button[href="^~^"]').addEventListener('click', function(event) {
+		event.preventDefault();
+		let section = document.querySelector('.expandable-section');
+		if (section.style.display === "none" || !section.style.display) {
+			section.style.display = "block";
+		} else {
+			section.style.display = "none";
+		}
+	});
+
+	document.querySelector('.close-btn').addEventListener('click', function() {
+		document.querySelector('.expandable-section').style.display = 'none';
+	});
+
+	</script>
+
+
+
+
+
+
+	<script>
+	document.querySelector('.button[href="wie"]').addEventListener('click', function(event) {
+		event.preventDefault();
+		let section = document.querySelector('.expandable-section2');
+		if (section.style.display === "none" || !section.style.display) {
+			section.style.display = "block";
+		} else {
+			section.style.display = "none";
+		}
+	});
+
+	document.querySelector('.close-btn').addEventListener('click', function() {
+		document.querySelector('.expandable-section2').style.display = 'none';
+	});
+
+	</script>
+
+	<script>
+	document.querySelector('.button[href="scc"]').addEventListener('click', function(event) {
+		event.preventDefault();
+		let section = document.querySelector('.expandable-section4');
+		if (section.style.display === "none" || !section.style.display) {
+			section.style.display = "block";
+		} else {
+			section.style.display = "none";
+		}
+	});
+
+	document.querySelector('.close-btn').addEventListener('click', function() {
+		document.querySelector('.expandable-section4').style.display = 'none';
+	});
+
+	</script>
+
+
+
+
+
+
+
+	<script>
+	document.querySelector('.button[href="xD"]').addEventListener('click', function(event) {
+		event.preventDefault();
+		let section = document.querySelector('.expandable-section3');
+		if (section.style.display === "none" || !section.style.display) {
+			section.style.display = "block";
+		} else {
+			section.style.display = "none";
+		}
+	});
+
+	document.querySelector('.close-btn').addEventListener('click', function() {
+		document.querySelector('.expandable-section3').style.display = 'none';
+	});
+
+	</script>
+
+
+
+<script>
+function showUploadButton() {
+    var fileInput = document.getElementById("fileInput");
+    var uploadButton = document.getElementById("upload_btn");
+    if (fileInput.files.length > 0) {
+        // If a file is selected, show the upload button
+        uploadButton.style.display = "block";
+    } else {
+        // If no file is selected, hide the upload button
+        uploadButton.style.display = "none";
+    }
+}
+</script>
+
+
+
+
+
+
+   <script>
+        const whatsappButton = document.getElementById('whatsapp-button');
+        whatsappButton.addEventListener('click', () => {
+            window.open('https://wa.me/436703596614', '_blank');
+        });
+    </script>
+
+
+
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var serviceSelection = document.getElementById('serviceSelection');
+    var laserFields = document.querySelector('.laser-fields');
+    var bikeFields = document.querySelector('.bike-fields');
+	var calendlyFields = document.querySelector('.calendly-Fields');
+    var scanFields = document.querySelector('.scan-fields');
+    var bikeButtons = document.querySelectorAll('.bike-buttons stripe-buy-button');
+
+    function updateService() {
+        var selectedService = serviceSelection.value;
+
+        laserFields.style.display = 'none';
+        bikeFields.style.display = 'none';
+		calendlyFields.style.display = 'none';
+        scanFields.style.display = 'none';
+
+        if (selectedService === 'laser') {
+            laserFields.style.display = 'block';
+        } else if (selectedService === '3dPrint') {
+            window.location.href = 'https://3dprintwien.ermine.at';
+			  } else if (selectedService === 'radl') {
+            window.location.href = 'https://radlzentrum.ermine.at';
+        } else if (selectedService === '3dScan') {
+            scanFields.style.display = 'block';
+        } else if (selectedService === 'bike') {
+            bikeFields.style.display = 'block';
+		} else if (selectedService === 'calendly') {
+            calendlyFields.style.display = 'block';
+        }
+    }
+
+    function updateBikeService() {
+        var selectedBikeService = document.getElementById('bikeService').value;
+        bikeButtons.forEach(function(button, idx) {
+            button.style.display = (idx === 0 && selectedBikeService === 'general') || (idx === 1 && selectedBikeService === 'brakes') ? 'block' : 'none';
+        });
+    }
+
+    serviceSelection.addEventListener('change', updateService);
+    document.getElementById('bikeService').addEventListener('change', updateBikeService);
+
+    // Initial setup
+    updateService();
+});
+
+function updateScanService() {
+    var selectedScanService = document.getElementById('scanService').value;
+    scanButtons.forEach(function(button, idx) {
+        button.style.display = (idx === 0 && selectedScanService === 'normal') || (idx === 1 && selectedScanService === 'extended') ? 'block' : 'none';
+    });
+}
+
+// Assuming that you have serviceSelection code and updateService() function above for the main service selection.
+
+// Add these lines:
+document.getElementById('scanService').addEventListener('change', updateScanService);
+
+// If you have defined "scan-buttons" as a class for the div containing the scan buttons, you can use the following line to select them:
+var scanButtons = document.querySelectorAll('.scan-buttons stripe-buy-button');
+
+// Initial setup
+updateScanService(); // Adds the new function for scan service.
+
+
+</script>
+
+<script>
+    function uploadFile() {
+        var fileInput = document.getElementById('fileInput');
+        var uploadStatus = document.getElementById('uploadStatus');
+
+        var file = fileInput.files[0];
+        if (file) {
+            var formData = new FormData();
+            formData.append('file', file);
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    uploadStatus.innerHTML = 'Datei erfolgreich empfangen.';
+                    uploadStatus.style.color = 'green';
+                } else {
+                    uploadStatus.innerHTML = 'Fehler beim Hochladen';
+                    uploadStatus.style.color = 'red';
+                }
+            })
+            .catch(error => {
+                uploadStatus.innerHTML = 'Fehler beim Hochladen';
+                uploadStatus.style.color = 'red';
+            });
+        }
+    }
+</script>
+
+<script>
+function toggleFAQ() {
+    var faqField = document.getElementById('faqField');
+    if (faqField.style.display === 'block') {
+        faqField.style.display = 'none';
+    } else {
+        faqField.style.display = 'block';
+    }
+}
+
+
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let buttons = document.querySelectorAll('.faq-button, .impressum-button');
+    
+    // Define our button colors
+    let buttonColors = [
+        '#003049',
+        '#D62828',
+        '#F77F00',
+        '#FCBF49',
+        '#EAE2B7',
+        '#9CB380',
+        '#1B98E0',
+        '#2E933C'
+    ];
+
+    function darkenColor(colorStr) {
+        // Transform color string to RGB values
+        let rgb = colorStr.slice(1).match(/.{2}/g).map(hex => parseInt(hex, 16));
+        
+        // Darken by 10%
+        return `rgb(${Math.floor(rgb[0] * 0.9)}, ${Math.floor(rgb[1] * 0.9)}, ${Math.floor(rgb[2] * 0.9)})`;
+    }
+
+    buttons.forEach(btn => {
+        // Get a random color from the buttonColors array and then remove that color to avoid repetition
+        let randomIndex = Math.floor(Math.random() * buttonColors.length);
+        let randomColor = buttonColors[randomIndex];
+        buttonColors.splice(randomIndex, 1);  // Remove the selected color
+
+        btn.style.backgroundColor = randomColor;
+
+        btn.addEventListener('mouseover', function() {
+            // Darken on hover
+            btn.style.backgroundColor = darkenColor(randomColor);
+        });
+
+        btn.addEventListener('mouseout', function() {
+            // Return to original color when not hovering
+            btn.style.backgroundColor = randomColor;
+        });
+
+        btn.addEventListener('mousedown', function() {
+            // Get another random color on click and update the stored color
+            let randomIndex = Math.floor(Math.random() * buttonColors.length);
+            randomColor = buttonColors[randomIndex];
+            buttonColors.splice(randomIndex, 1);  // Remove the selected color
+
+            btn.style.backgroundColor = randomColor;
+        });
+    });
+});
+
+
+</script>
+
+ <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        }
+    </script>
+ 
+    <script type="text/javascript"
+            src=
+"https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit">
+    </script>
+ 
+
+
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="button-container2">
+    <button class="faq-button" onclick="toggleFAQ()">FAQ</button>
+    <button class="impressum-button" onclick="toggleImpressum()">Impressum</button>
+<div class="google-translate-container">
+
+    <div id="google_translate_element"></div>
+
+    
+</div>
+</div>
+
+
+<!-- Impressum Field -->
+
+<div class="faq-field" id="faqField">
+  <div class="info-subtitle"><strong>Ich möchte mehrere Fahrräder testen, um zu sehen, welches ich kaufen möchte. Ist das möglich?</strong></div>
+    <p>Ja, geben Sie im Kalender an, welche Fahrräder wir vorbereiten sollen.</p>
+    
+    <div class="info-subtitle"><strong>Wie funktioniert das Reservierungssystem?</strong></div>
+    <p>Sehr einfach und bequem. Sie wählen einen Termin <span style="color: #f77f00; font-weight: bold;">(7-23 Uhr). </span>Während der von Ihnen gewünschten Zeit haben Sie die Möglichkeit, <span style="color: #f77f00; font-weight: bold;"> alles von uns anzufordern.</span> </p>
+
+    <div class="info-subtitle"><strong>Wie kann ich bezahlen?</strong></div>
+    <p>Sie können <span style="color: #f77f00; font-weight: bold;">bar, mit Karte und auch online über Stripe bezahlen. </span> Die Online-Zahlung per Stripe ist auf Anfrage ganz einfach möglich.</p>
+      
+    <div class="info-subtitle"><strong>Ich möchte eine Rückerstattung beantragen.</strong></div>
+    <p>Rückerstattungen können innerhalb von 14 Tagen nach dem Kauf erfolgen. Fordern Sie ein Formular per WhatsApp an, Sie erhalten ein Formular zum Ausfüllen.</p>
+</div>
+
+
+<div class="impressum-field" id="impressumField">
+    <p>Lukas Majer</p>
+    <p>Vorgartenstrasse 171, Wien, 1020</p>
+    <p>G-36233052</p>
+</div>
+
+
+<!-- Kontakt Button -->
+
+
+
+
+<script>
+function toggleKontakt() {
+    var kontaktField = document.getElementById('kontaktField');
+    if (kontaktField.style.display === 'none') {
+        kontaktField.style.display = 'block';
+    } else {
+        kontaktField.style.display = 'none';
+    }
+}
+</script>
+
+
+
+  <!-- JavaScript to handle calculator logic and dynamic button display -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var lengthInput = document.getElementById('length');
+    var widthInput = document.getElementById('width');
+    var materialSelect = document.getElementById('material');
+    var stripeBuyButtons = document.querySelectorAll('stripe-buy-button');
+
+    function updateOptions() {
+        var length = parseInt(lengthInput.value);
+        var width = parseInt(widthInput.value);
+        var selectedMaterial = materialSelect.value;
+    
+        // Clear existing options
+        materialSelect.innerHTML = '<option value="" disabled selected>Material auswählen</option>'; // Default option
+        
+        // Define material options based on criteria
+        var materialOptions = [
+            { value: 'A1', label: 'Sperrholz Pappel 4 mm (max 300x300 mm)', maxDim: 300 },
+            { value: 'A2', label: 'Sperrholz Pappel 4 mm (max 600x600 mm, min 301 mm, max 600 mm)', minDim: 301, maxDim: 600 },
+            { value: 'B1', label: 'Plexiglas XT 4mm Farblos 0A000 (max 250x250 mm)', maxDim: 250 },
+            { value: 'B2', label: 'Plexiglas XT 4mm Farblos 0A000 (max 500x500 mm, min 251 mm, max 500 mm)', minDim: 251, maxDim: 500 }
+        ];
+        
+        // Filter and add valid options to dropdown
+        materialOptions.forEach(function(option) {
+            var optionElement = document.createElement('option');
+            optionElement.value = option.value;
+            optionElement.textContent = option.label;
+            
+            if ((option.minDim === undefined || (length >= option.minDim && width >= option.minDim)) && (option.maxDim === undefined || (length <= option.maxDim && width <= option.maxDim))) {
+                materialSelect.appendChild(optionElement);
+            }
+        });
+        
+        // Re-select the previously selected material if it is still valid
+        if (materialSelect.querySelector('option[value="' + selectedMaterial + '"]')) {
+            materialSelect.value = selectedMaterial;
+        }
+        
+        // Show/hide the appropriate Stripe buy button
+        stripeBuyButtons.forEach(function(button) {
+            button.style.display = 'none';
+            if (materialSelect.value === button.getAttribute('button-idx')) {
+                button.style.display = 'block';
+            }
+        });
+    }
+    
+    // Event listeners for input changes and material selection
+    lengthInput.addEventListener('input', updateOptions);
+    widthInput.addEventListener('input', updateOptions);
+    materialSelect.addEventListener('change', updateOptions); // Use 'change' event instead of 'input'
+    
+    // Initial options setup
+    updateOptions();
+});
+
+
+</script>
+
+<script>
+    function toggleImpressum() {
+        var impressumField = document.getElementById('impressumField');
+        impressumField.classList.toggle('impressum-visible');
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

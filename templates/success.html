@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success - Ermine.at</title>
+    <style>
+    /* Global styles */
+body {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden; /* in case the video causes any horizontal overflow */
+}
+
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+    .bikes-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+   .bike {
+    padding: 20px;
+    margin: 10px;
+    border: 8px solid black;
+    flex: 0 0 calc(30% - 20px); /* You can adjust this to control the number of bikes per row on desktop */
+    text-align: center; /* Center the text and inline elements */
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.8); /* Black with 30% opacity */
+    border-radius: 15px;  /* Making the corners round */
+}
+
+    .bike-description {
+        margin-bottom: 10px;
+    }
+	
+	
+	
+.bike2 {
+    padding: 8px; /* Adjusted from 2px to 8px as per your requirement */
+    margin: 2px;
+    border: 8px solid black;
+    text-align: center; /* Center the text and inline elements */
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.8); /* Black with 80% opacity */
+    border-radius: 15px;  /* Making the corners round */
+    display: inline-block; /* Makes the box only as wide as its content */
+}
+
+
+	
+	
+
+/* Slideshow 4:3 aspect ratio */
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* 4:3 Aspect Ratio */
+    overflow: hidden;
+    margin-bottom: 15px; /* Adjust as required */
+    border-radius: 15px;  /* Making the corners round */
+}
+
+.slideshow-container img {
+    margin: auto;
+    display: none; /* Hide all images by default */
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slideshow-container img:first-child {
+    display: block; /* Display the first image by default */
+}
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .prev, .next {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+    }
+
+    .prev:hover, .next:hover {
+        opacity: 1;
+    }
+
+    .prev {
+        left: 10px;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    .next {
+        right: 10px;
+        border-width: 10px 0 10px 15px;
+        border-color: transparent transparent transparent white;
+    }
+
+    /* Mobile-specific styles */
+    @media screen and (max-width: 767px) {
+        .bike {
+            flex-basis: 95%; /* Sets bike width to full width on mobile */
+            margin: 0; /* Removes side margins */
+            padding: 5px; /* Adjusts padding for mobile */
+			        margin-bottom: 20px; /* Adjust as required */
+
+        }
+    }
+	
+}
+
+
+}
+
+
+    .info-title {
+        font-weight: bold;
+        font-size: 25px;
+        margin: 10px;
+    }
+
+ .info-subtitle {
+        font-weight: bold;
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    .info-text {
+        font-size: 20px; /* Adjust the font size as needed */
+    }
+
+    .stripe-container {
+        margin-top: 15px;
+}
+
+
+
+
+
+.logo-container {
+    text-align: center;
+    padding: 5px 0;
+    width: 100%; /* This ensures the container takes up the full width */
+}
+
+.logo {
+    max-width: 8%; 
+    height: auto;
+}
+
+
+
+			  .poster-image {
+				max-width: 20%; /* Adjust the width as needed */
+				height: auto;
+				    text-align: center;
+					    padding: 5px 0;
+
+
+			}
+
+
+	  /* Mobile layout */
+		@media (max-width: 768px) {
+			/* ... (other styles) ... */
+
+			/* Increase the size of posters to 150% on mobile */
+			.poster-image {
+				max-width: 98%; /* Adjust the width as needed */
+			}
+
+			/* ... (other styles) ... */
+		}
+		
+		
+		
+		
+		
+		
+		
+		}
+		
+
+		/* Desktop layout */
+		@media (min-width: 768px) {
+			/* ... (other styles) ... */
+
+			/* Reduce the size of posters to 30% on desktop */
+			.poster-image {
+				max-width: 30%; /* Adjust the width as needed */
+			}
+
+			/* ... (other styles) ... */
+		}
+		
+		
+			/* Mobile layout */
+	@media (max-width: 768px) {
+		/* ... (other styles) ... */
+
+		/* Reduce the size of the logo by half */
+		.logo {
+			max-width: 30%; /* Adjust the width as needed */
+		}
+		}
+		}
+		}
+		}
+		}
+		}
+		}
+		}
+
+			 .info-field {
+		 padding: 20px;
+    margin: 10px;
+    border: 8px solid black;
+    flex: 0 0 calc(30% - 20px); /* You can adjust this to control the number of bikes per row on desktop */
+    text-align: center; /* Center the text and inline elements */
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.8); /* Black with 30% opacity */
+    border-radius: 15px;  /* Making the corners round */
+}
+		.info-title {
+			font-weight: bold;
+			font-size: 28px;
+			margin: 10px;
+		}
+
+	 .info-subtitle {
+			font-weight: bold;
+			font-size: 24px;
+			margin: 10px;
+		}
+
+		.info-text {
+			font-size: 20px; /* Adjust the font size as needed */
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+   .whatsapp-container {
+    position: fixed;
+    bottom: 13px;
+    right: 20px; /* Change from right to left */
+	            z-index: 2;
+
+}
+
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    background-color: #25d366;
+    border-radius: 80px; 
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-button img {
+    width: 50px;
+    height: 50px;
+    border-radius: 80%;
+}
+
+.whatsapp-text {
+    display: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.whatsapp-button:hover .whatsapp-text {
+    display: inline; /* Display the text when the button is hovered */
+}
+
+
+
+	/* FAQ Field Styling */
+	.faq-field {
+		display: none;
+		background-color: rgba(0, 0, 0, 0.7);
+		border-radius: 10px;
+		padding: 20px;
+		margin: 20px auto;
+		color: white;
+		max-width: 70%;
+		text-align: center;
+						margin-bottom: 65px; /* Adjust this value for spacing between the buttons */
+
+	}
+
+	/* FAQ Field Styling */
+	.conditions-field {
+		display: none;
+		background-color: rgba(0, 0, 0, 0.7);
+		border-radius: 10px;
+		padding: 20px;
+		margin: 20px auto;
+		color: white;
+		max-width: 70%;
+		text-align: center;
+						margin-bottom: 65px; /* Adjust this value for spacing between the buttons */
+
+	}
+
+	.list-field {
+		display: none;
+		background-color: rgba(0, 0, 0, 0.7);
+		border-radius: 10px;
+		padding: 20px;
+		margin: 20px auto;
+		color: white;
+		max-width: 70%;
+		text-align: center;
+						margin-bottom: 65px; /* Adjust this value for spacing between the buttons */
+
+	}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.faq-button, .impressum-button {
+    background-color: #FF9999;  /* A lightened shade for demonstration */
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.5s ease;  /* Provides the fade effect */
+    border: none;
+    cursor: pointer;
+    margin-bottom: 60px;
+	margin-top: 20px;	/* Adds a gap at the bottom of the buttons */
+		margin-right: 20px;	/* Adds a gap at the bottom of the buttons */
+
+}
+
+
+.faq-button:hover, .impressum-button:hover {
+    background-color: #ffffff;  /* A slightly darkened shade */
+}
+
+.google-translate-container {
+    background-color: #ffffff;  /* A lightened shade for demonstration */
+    color: white;
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.5s ease;  /* Provides the fade effect */
+    border: none;
+    cursor: pointer;
+    margin-bottom: 60px;
+	margin-top: 20px;	/* Adds a gap at the bottom of the buttons */
+
+}
+
+
+
+.faq-button:hover, .impressum-button:hover {
+    background-color: #FF6666;  /* A slightly darkened shade */
+}
+
+.faq-button:active, .impressum-button:active {
+    background-color: #FF3333;  /* Even more darkened shade for click effect */
+}
+
+
+	.button-container2 {
+		display: flex;
+		justify-content: center;   /* This will horizontally center the items */
+		align-items: center;       /* This will vertically align the items in the center */
+		width: 100%;               /* Ensures the container takes the full width of its parent */
+		margin-top: 20px;          /* Adjust this value for spacing on top */
+		margin-bottom: 20px;       /* Adjust this value for spacing at the bottom */
+	}
+
+	.button-container2 .faq-button {
+		margin-right: 10px; /* Adjust this value for spacing between the buttons */
+	}
+
+	.button-container2 .impressum-button {
+		margin-left: 10px; /* Adjust this value for spacing between the buttons */
+	}
+
+	.button-container2 .kontakt-button {
+		margin-left: 10px; /* Adjust this value for spacing between the buttons */
+	}
+
+	.expandable-section {
+		display: none; /* Hidden by default */
+		max-width: 72%;
+		margin: 20px auto;
+		text-align: center;
+	}
+
+	.expandable-section2 {
+		display: none; /* Hidden by default */
+		max-width: 72%;
+		margin: 20px auto;
+		text-align: center;
+	}
+
+
+	.expandable-section3 {
+		display: none; /* Hidden by default */
+		max-width: 72%;
+		margin: 20px auto;
+		text-align: center;
+	}
+
+
+	.expandable-content {
+		background-color: rgba(0, 0, 0, 0.7);
+		padding: 20px;
+		border-radius: 10px;
+		color: white;
+	}
+
+	.close-btn {
+		position: absolute;
+		right: 20px;
+		top: 10px;
+		font-size: 24px;
+		cursor: pointer;
+	}
+
+	.highlighted {
+		color: #f77f00;
+	}
+
+	   /* Impressum Button Styling */
+    /* Center the Impressum Button */
+
+.lmao {
+    display: none;
+}
+
+
+    /* Impressum Field Styling */
+    .impressum-field {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px auto;
+        color: white;
+        max-width: 70%;
+        text-align: center;
+				margin-bottom: 65px; /* Adjust this value for spacing between the buttons */
+
+    }
+
+    /* Show Impressum Field when toggled */
+    .impressum-visible {
+        display: block;
+    }
+	
+	
+    .calendly-button {
+        background-color: #4DAA57;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.5s ease;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .calendly-button:hover {
+        background-color: #585123;  /* A darker shade when hovered */
+    }
+	
+	
+	
+	.calendly-button2 {
+        background-color: #2C2C54;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.5s ease;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .calendly-button2:hover {
+        background-color: #80A4ED;  /* A darker shade when hovered */
+    }
+	
+		
+	.calendly-button3 {
+        background-color: #F58549;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.5s ease;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .calendly-button3:hover {
+        background-color: #A31621;  /* A darker shade when hovered */
+    }
+	
+	.calendly-button4 {
+        background-color: #357DED;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.5s ease;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .calendly-button4:hover {
+        background-color: #32E875;  /* A darker shade when hovered */
+    }
+	
+
+		.button {
+		font-weight: bold;
+		border: none;
+		padding: 20px 40px;
+		margin: 5px;
+		cursor: pointer;
+		font-size: 20px;
+		text-decoration: none;
+		display: inline-block;
+		border-radius: 10px;
+		transition: background-color 0.3s ease-in-out;
+	}
+
+	/* For tablets and medium-sized screens (between 1500px and 1023px) */
+	@media screen and (max-width: 1023px) and (min-width: 1500px) {
+		.button {
+			padding: 15px 30px;
+			font-size: 18px;
+		}
+	}
+
+	/* For mobile screens (less than 767px) */
+	@media screen and (max-width: 767px) {
+		.button {
+			padding: 10px 20px;
+			font-size: 16px;
+		}
+	}
+
+			/* Button colors */
+			.button-color-1 { background-color: #003049; color: white; }
+			.button-color-2 { background-color: #D62828; color: white; }
+			.button-color-3 { background-color: #F77F00; color: black; }
+			.button-color-4 { background-color: #FCBF49; color: black; }
+			.button-color-5 { background-color: #EAE2B7; color: black; }
+			.button-color-6 { background-color: #9CB380; color: black; }
+			.button-color-7 { background-color: #1B98E0; color: black; }
+			.button-color-8 { background-color: #2E933C; color: black; }
+			
+			
+			
+			.button-color-1:hover { background-color: #002239; }
+			.button-color-2:hover { background-color: #B61818; }
+			.button-color-3:hover { background-color: #D66A00; }
+			.button-color-4:hover { background-color: #F5AF19; }
+			.button-color-5:hover { background-color: #D9CF9F; }
+			.button-color-6:hover { background-color: #87A266; }
+			.button-color-7:hover { background-color: #1578B6; }
+			.button-color-8:hover { background-color: #1C742A; }
+
+
+}
+}
+}
+
+.google-translate-container {
+    position: fixed;
+    bottom: 13px;
+    left: 20px; /* Position on the left */
+    z-index: 2;
+}
+
+.google-translate-button {
+    display: flex;
+    align-items: center;
+    background-color: #4285F4; /* Google's blue color, you can change this */
+    border-radius: 20px; 
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.google-translate-button img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.google-translate-text {
+    display: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.google-translate-button:hover .google-translate-text {
+    display: inline; /* Display the text when the button is hovered */
+}
+
+	 /* Apply color F77F00 to numbers */
+		.expandable-content .info-text .info-number {
+			color: #F77F00;
+		}
+
+
+.search-container {
+    margin: 20px 0;
+}
+
+#searchBox {
+    padding: 10px;
+	border: 4px solid white;
+    text-align: center; /* This centers the text */
+
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+.results-container {
+    background-color: black;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none; /* Initially hidden */
+}
+
+.results-container p {
+    margin: 0;
+    padding: 8px 10px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.results-container p:last-child {
+    border-bottom: none;
+}
+
+
+
+</style>
+
+<script>
+function toggleFAQ() {
+    var faqField = document.getElementById('faqField');
+    if (faqField.style.display === 'block') {
+        faqField.style.display = 'none';
+    } else {
+        faqField.style.display = 'block';
+    }
+}
+
+
+</script>
+
+<script>
+function toggleCONDITIONS() {
+    var conditionsField = document.getElementById('conditionsField');
+    if (conditionsField.style.display === 'block') {
+        conditionsField.style.display = 'none';
+    } else {
+        conditionsField.style.display = 'block';
+    }
+}
+
+
+</script>
+
+<script>
+function toggleLIST() {
+    var listField = document.getElementById('listField');
+    if (listField.style.display === 'block') {
+        listField.style.display = 'none';
+    } else {
+        listField.style.display = 'block';
+    }
+}
+
+
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let buttons = document.querySelectorAll('.faq-button, .impressum-button');
+    
+    // Define our button colors
+    let buttonColors = [
+        '#003049',
+        '#D62828',
+        '#F77F00',
+        '#FCBF49',
+        '#EAE2B7',
+        '#9CB380',
+        '#1B98E0',
+        '#2E933C'
+    ];
+
+    function darkenColor(colorStr) {
+        // Transform color string to RGB values
+        let rgb = colorStr.slice(1).match(/.{2}/g).map(hex => parseInt(hex, 16));
+        
+        // Darken by 10%
+        return `rgb(${Math.floor(rgb[0] * 0.9)}, ${Math.floor(rgb[1] * 0.9)}, ${Math.floor(rgb[2] * 0.9)})`;
+    }
+
+    buttons.forEach(btn => {
+        // Get a random color from the buttonColors array and then remove that color to avoid repetition
+        let randomIndex = Math.floor(Math.random() * buttonColors.length);
+        let randomColor = buttonColors[randomIndex];
+        buttonColors.splice(randomIndex, 1);  // Remove the selected color
+
+        btn.style.backgroundColor = randomColor;
+
+        btn.addEventListener('mouseover', function() {
+            // Darken on hover
+            btn.style.backgroundColor = darkenColor(randomColor);
+        });
+
+        btn.addEventListener('mouseout', function() {
+            // Return to original color when not hovering
+            btn.style.backgroundColor = randomColor;
+        });
+
+        btn.addEventListener('mousedown', function() {
+            // Get another random color on click and update the stored color
+            let randomIndex = Math.floor(Math.random() * buttonColors.length);
+            randomColor = buttonColors[randomIndex];
+            buttonColors.splice(randomIndex, 1);  // Remove the selected color
+
+            btn.style.backgroundColor = randomColor;
+        });
+    });
+});
+
+
+</script>
+
+<script>
+    function toggleImpressum() {
+        var impressumField = document.getElementById('impressumField');
+        impressumField.classList.toggle('impressum-visible');
+    }
+</script>
+
+
+<script>
+    function setupSlideshow() {
+        const slideShowIntervals = [];
+
+        // Handle each slideshow
+        document.querySelectorAll('.slideshow-container').forEach((container, idx) => {
+            let currentSlideIndex = 0;
+            const slides = container.querySelectorAll('img');
+
+            slides[currentSlideIndex].style.display = 'block';
+
+            slideShowIntervals.push(setInterval(() => {
+                slides[currentSlideIndex].style.display = 'none';
+                currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+                slides[currentSlideIndex].style.display = 'block';
+            }, 2000));
+
+            // Handle manual slide switching
+            container.querySelector('.prev').addEventListener('click', () => {
+                slides[currentSlideIndex].style.display = 'none';
+                currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+                slides[currentSlideIndex].style.display = 'block';
+                clearInterval(slideShowIntervals[idx]);
+            });
+
+            container.querySelector('.next').addEventListener('click', () => {
+                slides[currentSlideIndex].style.display = 'none';
+                currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+                slides[currentSlideIndex].style.display = 'block';
+                clearInterval(slideShowIntervals[idx]);
+            });
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", setupSlideshow);
+</script>
+
+<script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+	
+	
+	
+	
+	
+	
+
+
+	
+</head>
+<video id="video-background" autoplay muted loop>
+        <source src="{{ url_for('static', filename='ambro.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+<body>
+
+
+	
+	
+			<div class="content">
+
+		<div class="logo-container">
+				<a href="https://radlzentrum.ermine.at">
+    <img class="logo" src="{{ url_for('static', filename='logo.png') }}" alt="Logo" id="logo">
+</a>
+
+			
+		        </div>
+						<div class="logo-container">
+
+				<div class="bike2">
+    <div class="info-title">Erfolg! / Success! ♥</div>
+    <div class="info-title">  <span style="color: #f77f00;">Sie haben einen Termin reserviert. Wir freuen uns auf Sie!</span></div>
+    <div class="info-title">  <span style="color: #f77f00;">You reserved an appointmen with us. We're looking forward to you!</span></div>
+
+
+
+        </div>
+								<div class="logo-container">
+
+<button class="calendly-button2" onclick="window.location.href='https://radlzentrum.ermine.at'">Zurück zum Menü</button>
+
+ </div>
+ 				<img class="poster-image" src="{{ url_for('static', filename='herzvalentin.png') }}" alt="Poster 1">
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        }
+    </script>
+ 
+    <script type="text/javascript"
+            src=
+"https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit">
+    </script>
+ 
+
+</body>
+</html>
+
+<script>
+    function openCalendly() {
+        Calendly.showPopupWidget('https://calendly.com/erminerad/fahrradreparatur'); 
+        return false;
+    }
+</script>
+<!-- Calendly Badge-Widget Beginn -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<!-- Calendly Badge-Widget Ende -->
+		
+		
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'en'},
+            'google_translate_element'
+        );
+    }
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+<script>
+const parts = [
+"Kotflügel/Fenders | blatníky set MAX1 Ventura 24\"-28\"",
+"Bremsbelag/Bremsklotz (direkter Pin) | brzdová botka dřík MAX1 60mm",
+"Bremsbelag/Bremsklotz (mit Gewinde) | brzdová botka závit MAX1 60 mm",
+"Bremshebel/Bremsschalter | brzdové páky MAX1 \"V\" Alu",
+"Reifen/Pneu | plášť CHAOYANG 26x2,10 (559-52) H-5152 27 tpi černý",
+"Reifen/Pneu | plášť KENDA 24x1,5 (507-40) (K-184) černý",
+"Reifen/Pneu | plášť KENDA 26x1,95 (559-50) (K-831) černý",
+"Reifen/Pneu | plášť KENDA 26x1,95 (559-50) (K-892) černý",
+"Reifen/Pneu | plášť KENDA 700x32C (622-32) (K-125) černý",
+"Kotflügel/Fenders | KELLYS Blatníky KLS STORM",
+"Kettenreiniger/Kettenputzmittel | KELLYS Čistič řetězu KLS CRYSTAL",
+"Fahrradreiniger/Radreinigungsmittel | KELLYS Čistící prostředek KLS BIKE CLEANER náhradní náplň 1000 ml",
+"Flaschenhalter/Getränkehalter | Košík na fľašu KLASIK čierny",
+"Pedale/Trittflächen | Pedály Extend MTB-825A plastic",
+"Sattel/Fahrradsitz | Sedlo SMP MTB 6370 čierne",
+"Speichenreflektor/Radreflektor | odrazka do výpletu malá",
+"Vorderreflektor/Frontreflektor | odrazka přední s držákem malá \"V\"",
+"Rückreflektor/Heckreflektor | odrazka zadní s držákem malá \"V\"",
+"Öl/Schmieröl | olej WD-40 400ml",
+"Ständer/Fahrradständer | stojánek MAX1 středový stavitelný s podložkou 20-29\" černý",
+"Bremsenreiniger/Bremsputzmittel | čistič brzd MAX1 Brake Cleaner 400 ml",
+"Fahrradschlauch/Innerreifen | FISCHER Fahrradschlauch mittel in 26 Zoll | ETRO-Norm: 37/57-559 | Auto Ventil",
+"Rückleuchte/Hecklampe | Walfort Fahrradrückleuchte",
+"Scheinwerfer/Frontlampe | Walfort Fahrrad-Scheinwerfer",
+"Beleuchtungsset/Lichtset | Walfort Fahrradbeleuchtungsset",
+"Klingel/Fahrradglocke (klein) | Kleine Fahrradklingel",
+"Klingel/Fahrradglocke (groß) | Große Fahrradklingel",
+"Sattel/Fahrradsitz (komfortabel) | Fahrradsitz, weich und angenehm",
+"Sattel/Fahrradsitz (einfach) | Fahrradsitz, einfach",
+"Fahrradschlauch/Innerreifen | Walfort Fahrradschlauch 28 x 1 5/8 x 1 3/8 ETRTO: 30-622 // 700 x 35/43c",
+"Schraube/Bolzen | M6 x 40mm, Schwarz",
+"Schraube/Bolzen | M6 x 50mm, Schwarz",
+"Schraube/Bolzen | M5 x 12mm",
+"Schraube/Bolzen | M5 x 16mm",
+"Schraube/Bolzen | M6 x 40mm, Schwarz",
+"Schrauben/Bolzen | Fahrradreparaturset, verschiedene Größen",
+"Mutter | verschiedene Größen",
+"Distanzstücke / Unterlegscheiben |  verschiedene Größen",
+];
+
+function searchParts() {
+    const query = document.getElementById('searchBox').value.toLowerCase();
+    let results = [];
+
+    for (let part of parts) {
+        if (part.toLowerCase().includes(query)) {
+            results.push(part);
+        }
+    }
+
+    displayResults(results);
+}
+
+function displayResults(results) {
+    const resultsContainer = document.getElementById('searchResults');
+    let html = '';
+
+    for (let result of results) {
+        html += `<p>${result}</p>`;
+    }
+
+    resultsContainer.innerHTML = html;
+
+    if (results.length > 0) {
+        resultsContainer.style.display = 'block';
+    } else {
+        resultsContainer.style.display = 'none';
+    }
+}
+</script>
